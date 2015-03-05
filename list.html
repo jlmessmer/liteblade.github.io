@@ -42,7 +42,7 @@
         </nav>
         <div class="container">
             <h1 style="color: #fff">Here are some tutors who can help you:</h1>
-            <table class="table table-hover">
+            <table class="table table-hover tableList">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -59,7 +59,7 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Sorta Helpful Tutor</td>
@@ -68,7 +68,7 @@
                     <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Not Helpful Tutor</td>
@@ -76,21 +76,21 @@
                     <td>Yes</td>
                     <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Unrated Tutor</td>
                     <td>helpfultutor@live.unc.edu</td>
                     <td>Yes</td>
                     <td>Not yet rated</td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Really Bad Tutor</td>
                     <td>helpfultutor@live.unc.edu</td>
                     <td>Yes</td>
                     <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Helpful Tutor</td>
@@ -101,7 +101,7 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Helpful Tutor</td>
@@ -112,7 +112,7 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Helpful Tutor</td>
@@ -123,7 +123,7 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Helpful Tutor</td>
@@ -134,7 +134,7 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
                 <tr>
                     <td>Helpful Tutor</td>
@@ -145,9 +145,32 @@
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                    <td><button class="btn btn-primary">Contact</button></td>
+                    <td><button class="btn btn-primary contact">Contact</button></td>
                 </tr>
             </table>
+            <div class="row timeForm" style="display: none;">
+                <div class="col-lg-7">
+                    <form class="form-horizontal" action="list.html" method="post">
+                        <div class="form-group">
+                            <label for="name" class="control-label" style="color: #fff">Name</label>
+                            <input name="name" class="form-control" type="text" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label" style="color: #fff">Email</label>
+                            <input name="email" type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="class" class="control-label" style="color: #fff">What time works for you?</label>
+                            <select name="class" class="form-control">
+                                <option value="Milk">Time Slot 1</option>
+                                <option value="Cheese">Time Slot 2</option>
+                                <option value="Bread">Time Slot 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign Up!</button>
+                    </form>
+                </div>
+            </div>
         </div>
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -155,9 +178,9 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script>
-            $(".findButton").click(function(){
-                $(".findButton").fadeOut();
-               $(".tutorForm").slideDown(); 
+            $(".contact").click(function(){
+                $(".tableList").fadeOut();
+               $(".timeForm").slideDown(); 
             });
         </script>
   </body>
